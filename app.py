@@ -2,7 +2,7 @@ import streamlit as st
 
 # ตั้งค่าหน้าแอป
 1. เปลี่ยนชื่อบนแทบ Browser (Tab Name)
-st.set_page_config(page_title="Knowledge of Cervical Cancer", page_icon="🎗️", layout="centered")
+st.set_page_config(page_title=" Cervical Cancer", page_icon="🎗️", layout="centered")
 
 # ปรับแต่งสีแอป (Theme Customization)
 st.markdown("""
