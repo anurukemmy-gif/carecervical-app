@@ -7,7 +7,7 @@ st.set_page_config(
     layout="centered"
 )
 
-# --- 2. การตกแต่ง CSS (ปรับสีชื่อแอปให้เด่นชัด) ---
+# --- 2. การตกแต่ง CSS (แก้ไขจุดผิดพลาดและปรับสีชื่อแอป) ---
 st.markdown("""
     <style>
     .stApp { background: linear-gradient(180deg, #FFF0F5 0%, #FFFFFF 100%); }
@@ -21,27 +21,18 @@ st.markdown("""
         box-shadow: 0px 4px 15px rgba(0,0,0,0.2);
     }
     
-    /* ปรับแต่งชื่อแอปให้ขาวชัดเจนและมีเงา */
     .hero-title {
         color: #FFFFFF !important;
         font-size: 2.5rem;
         font-weight: 800;
-        text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
         margin-bottom: 10px;
-        line-height: 1.2;
     }
     
     .hero-subtitle {
         color: #FFEBEE !important;
         font-size: 1.2rem;
-        font-weight: 400;
     }
 
     .content-box {
-        background-color: white; padding: 25px; border-radius: 20px;
-        border-left: 10px solid #D81B60; margin-bottom: 20px;
-        box-shadow: 0px 4px 10px rgba(0,0,0,0.05);
-    }
-    
-    .stButton>button { 
-        background-color: #D81B60; color: white !important;
+        background
