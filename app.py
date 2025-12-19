@@ -1,4 +1,4 @@
-iimport streamlit as st
+import streamlit as st
 
 # --- 1. การตั้งค่าหน้าแอป (ต้องอยู่บรรทัดแรกเสมอ) ---
 st.set_page_config(
