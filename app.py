@@ -67,10 +67,9 @@ st.markdown("""
 </div>
 """, unsafe_allow_html=True)
 
-# --- แก้ไข: เปลี่ยนรูปภาพหน้าแรกให้เกี่ยวกับมะเร็งปากมดลูก ---
-# ใช้รูปภาพที่สื่อถึงการรณรงค์และการตรวจคัดกรองเพื่อให้เหมาะสมกับงานวิจัย
-st.image("https://www.siphhospital.com/storage/article/886/Cervical-cancer.jpg", 
-         caption="ร่วมกันรณรงค์และตรวจคัดกรองมะเร็งปากมดลูกเพื่อคนที่คุณรัก", 
+# --- แก้ไขลิงก์รูปภาพใหม่ (เพื่อให้แสดงผลได้แน่นอน) ---
+st.image("https://images.unsplash.com/photo-1579152128802-e95b9b1ad6a4?q=80&w=1000&auto=format&fit=crop", 
+         caption="การตรวจคัดกรองคือหัวใจสำคัญของการป้องกันมะเร็งปากมดลูก", 
          use_container_width=True)
 
 # --- 4. เมนูหลัก ---
