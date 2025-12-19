@@ -7,7 +7,7 @@ st.set_page_config(
     layout="centered"
 )
 
-# --- 2. การตกแต่ง CSS (แก้ไขจุดผิดพลาดและปรับสีชื่อแอป) ---
+# --- 2. การตกแต่ง CSS (ตรวจสอบการปิด Triple Quotes อย่างละเอียด) ---
 st.markdown("""
     <style>
     .stApp { background: linear-gradient(180deg, #FFF0F5 0%, #FFFFFF 100%); }
@@ -25,7 +25,7 @@ st.markdown("""
         color: #FFFFFF !important;
         font-size: 2.5rem;
         font-weight: 800;
-        text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+        text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
         margin-bottom: 10px;
     }
     
@@ -35,4 +35,6 @@ st.markdown("""
     }
 
     .content-box {
-        background
+        background-color: white; padding: 25px; border-radius: 20px;
+        border-left: 10px solid #D81B60; margin-bottom: 20px;
+        box-shadow: 0px 4px 10px rgba(0,0,0,0.05);
