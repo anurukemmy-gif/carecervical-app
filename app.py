@@ -1,32 +1,25 @@
 import streamlit as st
 
-# --- 1. ตั้งค่าหน้าแอป ---
+# --- 1. ตั้งค่าหน้าแอป (ต้องอยู่บรรทัดแรกเสมอ) ---
 st.set_page_config(
     page_title="Knowledge of Cervical Cancer", 
     page_icon="🎗️", 
     layout="centered"
 )
 
-# --- 2. การตกแต่งสีและรูปแบบ (CSS) ---
+# --- 2. การตกแต่งสี (ปรับให้เรียบง่ายที่สุดเพื่อป้องกัน Error) ---
 st.markdown("""
     <style>
     .stApp { background-color: #FFF0F5; }
-    h1 { color: #C2185B !important; text-align: center; }
-    h2, h3 { color: #D81B60 !important; }
-    p, span, label, .stMarkdown { color: #333333 !important; font-size: 1.1rem !important; }
+    h1, h2, h3 { color: #D81B60 !important; }
     .stButton>button { 
         background-color: #D81B60; color: white !important; 
         border-radius: 20px; font-weight: bold; width: 100%; height: 50px;
     }
-    .info-card {
-        background-color: white;
-        padding: 20px;
-        border-radius: 15px;
-        border-left: 5px solid #D81B60;
-        margin-bottom: 15px;
-        box-shadow: 2px 2px 8px rgba(0,0,0,0.05);
+    .info-box {
+        background-color: white; padding: 15px; border-radius: 10px;
+        border-left: 5px solid #D81B60; margin-bottom: 10px;
     }
-    .highlight { color: #D81B60; font-weight: bold; }
     </style>
     """, unsafe_allow_html=True)
 
@@ -35,6 +28,20 @@ st.title("🎗️ Knowledge of Cervical Cancer")
 st.subheader("ศูนย์เรียนรู้และสนับสนุนการคัดกรองมะเร็งปากมดลูก")
 st.divider()
 
-# --- 4. เมนูหลัก ---
-tab1, tab2, tab3 = st.tabs([
-    "📊 ส่วนที่
+# --- 4. เมนูหลัก 3 ส่วน ---
+tab1, tab2, tab3 = st.tabs(["📊 การประเมิน", "📖 ความรู้และวิธีตรวจ", "📍 ค้นหาจุดบริการ"])
+
+# --- ส่วนที่ 1: ประเมิน ---
+with tab1:
+    st.header("📋 แบบประเมินเบื้องต้น")
+    age = st.number_input("อายุของคุณ (ปี)", min_value=0, max_value=120, value=30)
+    ever_screened = st.radio("คุณเคยตรวจมะเร็งปากมดลูกหรือไม่?", ["เคย", "ไม่เคย"])
+    if st.button("บันทึกข้อมูล"):
+        st.success("บันทึกข้อมูลสำเร็จ! โปรดศึกษาความรู้ในส่วนถัดไป")
+
+# --- ส่วนที่ 2: ความรู้ครบถ้วน (อัปเดตใหม่) ---
+with tab2:
+    st.header("📖 ข้อมูลที่ควรรู้")
+    
+    with st.expander("🔍 1. รู้จักมะเร็งปากมดลูก", expanded=True):
+        st
